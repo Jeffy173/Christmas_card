@@ -49,10 +49,10 @@ accounts={
 }
 
 def Aici_response():
-    with open("backend/Christmas_card_picture.jpg","rb") as f:
+    with open("backend/Aici/Christmas_card_picture.jpg","rb") as f:
         image_bytes=f.read()
         base64_str=base64.b64encode(image_bytes).decode('utf-8')
-    with open("backend/card.html","r") as f:
+    with open("backend/Aici/card.html","r") as f:
         html_text=f.read().format(base64_str)
     return Response(
         content=html_text,
