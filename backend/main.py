@@ -8,7 +8,7 @@ from fastapi.staticfiles import StaticFiles
 import os
 from fastapi.responses import Response
 import io
-from PIL import Image
+# from PIL import Image
 import base64
 import uuid
 import time
