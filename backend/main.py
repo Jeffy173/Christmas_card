@@ -46,6 +46,9 @@ def new_hash(s:str)->str:
 # accounts and passwords -> name : hashed_key
 accounts={
     "Aici":new_hash("mp042958H"),
+    "Tim":new_hash("Donkey"),
+    "Sio":new_hash("Maths"),
+    "Jeffy":new_hash("myfriend"),
 }
 import base64
 
@@ -71,8 +74,77 @@ def Aici_response():
     )
     return Response(content=html, media_type="text/html")
 
+def Tim_response():
+    with open("backend/Tim/favicon.svg","rb") as f:
+        favicon_b64 = base64.b64encode(f.read()).decode()
+    with open("backend/Tim/Christmas_card_picture.jpg", "rb") as f:
+        picture_b64 = base64.b64encode(f.read()).decode()
+    with open("backend/Tim/gift.svg", "rb") as f:
+        gift_b64 = base64.b64encode(f.read()).decode()
+    with open("backend/Tim/style.css", "rb") as f:
+        css_b64 = base64.b64encode(f.read()).decode()
+    with open("backend/Tim/script.js", "r",encoding="utf-8") as f:
+        script = f.read()
+    with open("backend/Tim/index.html", "r", encoding="utf-8") as f:
+        template = f.read()
+    html=template.format(
+        favicon=favicon_b64,
+        css=css_b64,
+        picture=picture_b64,
+        gift=gift_b64,
+        script=script
+    )
+    return Response(content=html, media_type="text/html")
+
+def other_response():
+    with open("backend/other/favicon.svg","rb") as f:
+        favicon_b64 = base64.b64encode(f.read()).decode()
+    with open("backend/other/Christmas_card_picture.jpg", "rb") as f:
+        picture_b64 = base64.b64encode(f.read()).decode()
+    with open("backend/other/gift.svg", "rb") as f:
+        gift_b64 = base64.b64encode(f.read()).decode()
+    with open("backend/other/style.css", "rb") as f:
+        css_b64 = base64.b64encode(f.read()).decode()
+    with open("backend/other/script.js", "r",encoding="utf-8") as f:
+        script = f.read()
+    with open("backend/other/index.html", "r", encoding="utf-8") as f:
+        template = f.read()
+    html=template.format(
+        favicon=favicon_b64,
+        css=css_b64,
+        picture=picture_b64,
+        gift=gift_b64,
+        script=script
+    )
+    return Response(content=html, media_type="text/html")
+
+def Sio_response():
+    with open("backend/Sio/favicon.svg","rb") as f:
+        favicon_b64 = base64.b64encode(f.read()).decode()
+    with open("backend/Sio/Christmas_card_picture.jpg", "rb") as f:
+        picture_b64 = base64.b64encode(f.read()).decode()
+    with open("backend/Sio/gift.svg", "rb") as f:
+        gift_b64 = base64.b64encode(f.read()).decode()
+    with open("backend/Sio/style.css", "rb") as f:
+        css_b64 = base64.b64encode(f.read()).decode()
+    with open("backend/Sio/script.js", "r",encoding="utf-8") as f:
+        script = f.read()
+    with open("backend/Sio/index.html", "r", encoding="utf-8") as f:
+        template = f.read()
+    html=template.format(
+        favicon=favicon_b64,
+        css=css_b64,
+        picture=picture_b64,
+        gift=gift_b64,
+        script=script
+    )
+    return Response(content=html, media_type="text/html")
+
 responses={
     "Aici":Aici_response(),
+    "Tim":Tim_response(),
+    "Jeffy":other_response(),
+    "Sio":Sio_response(),
 }
 
 class Talking:

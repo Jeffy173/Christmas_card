@@ -1,0 +1,90 @@
+.bgc0{
+    background-color:#3fad16;
+}
+
+.bgc1{
+    background-color:#1424d1;
+}
+
+.bgc2{
+    background:linear-gradient(#3fad16,#1424d1,#3fad16);
+}
+
+body{
+    width:420px;
+    height:min-content;
+    margin:10px;
+}
+
+.big_box{
+    width:420px;
+    height:min-content;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:center;
+}
+
+.picture_box{
+    width:420px;
+    height:210px;
+}
+
+.gift_box{
+    width:420px;
+    height:100px;
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-end;
+    align-items:center;
+}
+
+.button_box{
+    width:320px;
+    height:100px;
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-start;
+    align-items:flex-end;
+}
+
+.picture{
+    width:420px;
+    height:210px;
+}
+
+.gift{
+    width:100px;
+    height:100px;
+}
+
+.text-box{
+    width:420px;
+    height:min-content;
+    font-size:18px;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+}
+
+p{
+    width:420px;
+    height:20px;
+    font-size:18px;
+    color:white;
+    display:flex;
+    flex-direction:row;
+    margin:10px 0px;
+}
+
+.pleft{
+    justify-content:flex-start;
+}
+
+.pright{
+    justify-content:flex-end;
+}
+
+#button{
+    color:white;
+}

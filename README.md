@@ -1,2 +1,2 @@
 # Christmas_card
-to Aici
+to my friends
